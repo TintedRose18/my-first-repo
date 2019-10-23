@@ -1,0 +1,109 @@
+STARTING_FUNDS = 80.0
+FLOUR_COST_PER_BAG = 2.5
+EGGS_COST_PER_CRATE = 1.9
+YEAST_COST_PER_BAG = 3.25
+BUTTER_COST_PER_PACK = 1.25
+MILK_COST_PER_JUG = 2.75
+GALLONS_MILK_PER_JUG = 1.0
+EGGS_PER_CRATE = 24.0
+TBSP_BUTTER_PER_PACK = 64.0
+CUPS_FLOUR_PER_BAG = 25.0
+CUP_YEAST_PER_BAG = 6.0
+FLOUR_REQUIRED = 48.0 + 112.5
+EGGS_REQUIRED = 12.0 + 60.0
+BUTTER_REQUIRED = 144.0
+YEAST_REQUIRED = 39 + 50
+MILK_REQUIRED = 18.0
+CUPS_IN_GALLON = 16
+TSP_IN_CUP = 48
+
+NOTHING = 'NOTHING'
+optionsList = ["Begin the baguette dough", "Make the macrons", "Make the croissants", "Bake the baguett\
+es"]
+cookingList = ["eggs", "flour", "butter", "yeast", "milk"]
+
+def print_task_list(tasks_remaining):
+    index = 0
+    while index < len(optionsList):
+        print(index + 1, "-", optionsList[index])
+        index += 1
+
+def is_valid_input(index, tasks):
+    if index < len(tasks):
+        print(????)
+
+def go_shopping():
+    enterItem = input("What would you like to purchase? (ENTER 'NOTHING' to leave store) ")
+
+def check_items_enough(shopping_cart)
+
+def bake():
+    print("We have everything we need! Ready! Set! Bake!")
+    print("Here are your remaining tasks of the day")
+
+    index = 0
+    while index < len(optionsList):
+        print(index + 1. "-", optionsList[index])
+        index += 1
+
+    crossOff = int(input("What action would you like to cross off your list next?"))
+
+    if crossOff != optionsList[0]:
+        print("We should really start the baguette dough first!")
+
+
+if __name__ == "__main__":
+
+    print("Baker! You must buy the following with $80:")
+
+    print()
+
+    print("       For 300 croissants:")
+    print("         48 cups of flour")
+    print("         12 eggs")
+    print("         144 tbsp of butter")
+    print("         39 tsp of yeast")
+    print("         18 cups of milk")
+
+    print()
+
+    print("       For 600 macarons:")
+    print("         60 eggs")
+
+    print()
+
+    print("Welcome to the supermarket!")
+
+    bakeOff = []
+
+    print_task_list(bakeOff)
+
+    enterItem = go_shopping(bakeOff)
+
+    if enterItem == cookingList[0]:
+        enterAmount = int(input("How many crates of eggs would you like? "))
+
+    if enterItem == cookingList[1]:
+        enterAmount = int(input("How many bags of flour would you like? "))
+
+    if enterItem == cookingList[2]:
+        enterAmount = int(input("How many packs of butter would you like? "))
+
+    if enterItem == cookingList[3]:
+        enterAmount = int(input("How many bags of yeast would you like? "))
+
+    if enterItem == cookingList[4]:
+        enterAmount = int(input("How many jugs of milk would you like? "))
+
+     if enterItem not in cookingList:
+        print("That is not a valid entry.")
+        enterItem = input("What would you like to purchase? (Enter 'NOTHING' to leave store) ")
+
+
+
+
+
+
+
+
+
