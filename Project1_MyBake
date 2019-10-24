@@ -30,12 +30,55 @@ def print_task_list(tasks_remaining):
 
 def is_valid_input(index, tasks):
     if index < len(tasks):
-        print(????)
+        return False
+
+    if index > len(tasks):
+        return False
+    else:
+        return True
 
 def go_shopping():
-    enterItem = input("What would you like to purchase? (ENTER 'NOTHING' to leave store) ")
+    egg_tracker  = 0
+    flour_tracker = 0
+    butter_tracker = 0
+    yeast_tracker = 0
+    milk_tracker = 0
 
-def check_items_enough(shopping_cart)
+    enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+    while enterItem != NOTHING:
+
+        if enterItem == cookingList[0]:
+            egg_tracker = float(input("How many crates of eggs would you like? "))
+
+        if enterItem == cookingList[1]:
+            flour_tracker = float(input("How many bags of flour would you like? "))
+
+        if enterItem == cookingList[2]:
+            butter_tracker = float(input("How many packs of butter would you like? "))
+
+        if enterItem == cookingList[3]:
+            yeast_tracker = float(input("How many bags of yeast would you like? "))
+
+        if enterItem == cookingList[4]:
+            milk_tracker = float(input("How many jugs of milk would you like? "))
+
+	else:
+            print("That is not a valid entry.")
+            enterItem = input("What would you like to purhcase (Enter 'NOTHING' to leave store)")
+
+def check_items_enough(shopping_cart):
+    myCart = []
+    while True:
+        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+        myCart.append(enterItem)
+        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+
+        if enterItem in myCart:
+            print("This item is already in the cart. Pick something else.")
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+
+        #return shopping_cart                                                                                             
+
 
 def bake():
     print("We have everything we need! Ready! Set! Bake!")
@@ -43,7 +86,7 @@ def bake():
 
     index = 0
     while index < len(optionsList):
-        print(index + 1. "-", optionsList[index])
+        print(index + 1, "-", optionsList[index])
         index += 1
 
     crossOff = int(input("What action would you like to cross off your list next?"))
@@ -51,6 +94,13 @@ def bake():
     if crossOff != optionsList[0]:
         print("We should really start the baguette dough first!")
 
+    else:
+        print("Ok, let's knead some baguette dough!")
+        print("Here are your remaining tasks of the day")
+        index = 1
+        while index < len(optionsList):
+            print(index + 1, "-", optionsList[index])
+            index += 1
 
 if __name__ == "__main__":
 
@@ -76,28 +126,7 @@ if __name__ == "__main__":
 
     bakeOff = []
 
-    print_task_list(bakeOff)
-
-    enterItem = go_shopping(bakeOff)
-
-    if enterItem == cookingList[0]:
-        enterAmount = int(input("How many crates of eggs would you like? "))
-
-    if enterItem == cookingList[1]:
-        enterAmount = int(input("How many bags of flour would you like? "))
-
-    if enterItem == cookingList[2]:
-        enterAmount = int(input("How many packs of butter would you like? "))
-
-    if enterItem == cookingList[3]:
-        enterAmount = int(input("How many bags of yeast would you like? "))
-
-    if enterItem == cookingList[4]:
-        enterAmount = int(input("How many jugs of milk would you like? "))
-
-     if enterItem not in cookingList:
-        print("That is not a valid entry.")
-        enterItem = input("What would you like to purchase? (Enter 'NOTHING' to leave store) ")
+    letsGo = go_shopping()
 
 
 
