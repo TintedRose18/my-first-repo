@@ -46,11 +46,10 @@ def go_shopping():
     itemsList = []
 
     money_tracker = STARTING_FUNDS
-#check indent#########
+
    flag = TRUE
-    while flag == TRUE and money_tracker > 0:
-      enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-      #check indent#########
+   enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+   while enterItem != NOTHING and flag == True and money_tracker > 0:
 
         if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2\
 ] and enterItem != cookingList[3] and enterItem != cookingList[4]:
@@ -90,7 +89,8 @@ def go_shopping():
 	if money_tracker <= 0:
 		flag == FALSE
 	
-	
+	enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+
     return itemsList
     
     
@@ -130,6 +130,8 @@ JUG]
 	    
 
 def bake():
+    #Input: Nothing, because here we will be prompting the user with a menu that will be changing constantly         
+    #Output: ????                                                                                                    
     print("We have everything we need! Ready! Set! Bake!")
     print("Here are your remaining tasks of the day")
 
@@ -140,16 +142,10 @@ def bake():
 
     crossOff = int(input("What action would you like to cross off your list next?"))
 
-    if crossOff != optionsList[0]:
-        print("We should really start the baguette dough first!")
-
-    else:
-        print("Ok, let's knead some baguette dough!")
-        print("Here are your remaining tasks of the day")
-        index = 1
-        while index < len(optionsList):
-            print(index + 1, "-", optionsList[index])
-            index += 1
+    if crossOff == optionsList[0]:
+        print("Make the dough")
+        optionsList.remove([0])
+    print(optionsList)
 
 if __name__ == "__main__":
 
