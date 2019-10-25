@@ -45,7 +45,7 @@ def go_shopping():
     
     money_tracker = STARTING_FUNDS
 
-    enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+    enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
     while enterItem != NOTHING and money_tracker > 0:
 
         if enterItem == cookingList[0]:
@@ -74,13 +74,13 @@ def go_shopping():
 def check_items_enough(shopping_cart):
     myCart = []
     while True:
-        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
         myCart.append(enterItem)
-        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
         if enterItem in myCart:
             print("This item is already in the cart. Pick something else.")
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
         #return shopping_cart                                                                                             
 
@@ -94,7 +94,7 @@ def bake():
         print(index + 1, "-", optionsList[index])
         index += 1
 
-    crossOff = int(input("What action would you like to cross off your list next?"))
+    crossOff = int(input("What action would you like to cross off your list next? "))
 
     if crossOff != optionsList[0]:
         print("We should really start the baguette dough first!")
