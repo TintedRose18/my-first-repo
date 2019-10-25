@@ -80,6 +80,12 @@ def go_shopping():
           #  enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ") 
 
 def check_items_enough(shopping_cart):
+	for i in range(5):
+        if shopping_cart[i] * EGGS_PER_CRATE >= EGGS_REQUIRED:
+            flag = True
+	
+	
+	
    # myCart = []
     #while True:
      #   enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
