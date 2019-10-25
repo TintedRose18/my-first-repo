@@ -80,9 +80,15 @@ def go_shopping():
           #  enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ") 
 
 def check_items_enough(shopping_cart):
-	for i in range(5):
-        	if shopping_cart[i] * EGGS_PER_CRATE >= EGGS_REQUIRED:
-            		flag = True
+	conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER\
+_JUG]
+
+    for i in range(conList):
+        if shopping_cart[i] * conList >= EGGS_REQUIRED:
+            flag = True
+        else:
+            flag = False
+	    #add a statement?
 	
 	
 	
