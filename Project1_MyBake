@@ -46,9 +46,11 @@ def go_shopping():
     itemsList = []
 
     money_tracker = STARTING_FUNDS
-
-     enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-    while enterItem != NOTHING and money_tracker > 0:
+#check indent#########
+   flag = TRUE
+    while flag == TRUE and money_tracker > 0:
+      enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+      #check indent#########
 
         if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2\
 ] and enterItem != cookingList[3] and enterItem != cookingList[4]:
@@ -85,6 +87,8 @@ def go_shopping():
             print(money_tracker)
 	    
         print(money_tracker)
+	if money_tracker <= 0:
+		flag == FALSE
 	
 	
     return itemsList
