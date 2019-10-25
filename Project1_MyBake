@@ -49,6 +49,11 @@ def go_shopping():
 
     enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
     while enterItem != NOTHING and money_tracker > 0:
+    
+    	if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2] and en\
+terItem != cookingList[3] and enterItem != cookingList[4]:
+            print("That is not a valid entry.")
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
         if enterItem == cookingList[0]:
             myEggs = float(input("How many crates of eggs would you like? "))
@@ -75,9 +80,8 @@ def go_shopping():
             milk_tracker += myMilk
             enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 	    
-	#else:                                                                         	                      
-         #   print("That is not a valid entry.")                                                             
-	 # reprompt user
+  return itemsList
+	   
 
 def check_items_enough(shopping_cart):
 conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER\
