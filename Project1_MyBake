@@ -81,8 +81,8 @@ def go_shopping():
 
 def check_items_enough(shopping_cart):
 	for i in range(5):
-        if shopping_cart[i] * EGGS_PER_CRATE >= EGGS_REQUIRED:
-            flag = True
+        	if shopping_cart[i] * EGGS_PER_CRATE >= EGGS_REQUIRED:
+            		flag = True
 	
 	
 	
