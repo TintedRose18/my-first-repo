@@ -88,9 +88,10 @@ _JUG]
         if shopping_cart[i] * conList[i] >= reqList[i]:
             flag = True
 
-        return False
-	
+        else:
+            return False
 
+    return flag
 
 def bake():
     print("We have everything we need! Ready! Set! Bake!")
