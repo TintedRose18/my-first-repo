@@ -42,85 +42,79 @@ def go_shopping():
     butter_tracker = 0
     yeast_tracker = 0
     milk_tracker = 0
-    
+
     itemsList = []
-    
+
     money_tracker = STARTING_FUNDS
 
     enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
     while enterItem != NOTHING and money_tracker > 0:
-    
-    	if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2] and en\
+
+        if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2] and en\
 terItem != cookingList[3] and enterItem != cookingList[4]:
             print("That is not a valid entry.")
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
-       	if enterItem == cookingList[0]:
+        if enterItem == cookingList[0]:
             myEggs = float(input("How many crates of eggs would you like? "))
             egg_tracker += myEggs
-	    money_tracker = money_tracker - (myEggs * EGGS_PER_CRATE)
-	    
+            money_tracker = money_tracker - (myEggs * EGGS_PER_CRATE)
 
-      	if enterItem == cookingList[1]:
-           myFlour = float(input("How many bags of flour would you like? "))
-           flour_tracker += myFlour
-   
+        if enterItem == cookingList[1]:
+            myFlour = float(input("How many bags of flour would you like? "))
+            flour_tracker += myFlour
 
         if enterItem == cookingList[2]:
             myButter = float(input("How many packs of butter would you like? "))
             butter_tracker += myButter
-            
 
-	if enterItem == cookingList[3]:
+        if enterItem == cookingList[3]:
             myYeast = float(input("How many bags of yeast would you like? "))
             yeast_tracker += myYeast
-       
 
         if enterItem == cookingList[4]:
             myMilk = float(input("How many jugs of milk would you like? "))
             milk_tracker += myMilk
-	
-        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-	    
-  return itemsList
-	   
 
+        print(money_tracker)
+        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+
+    return itemsList
+    
+    
 def check_items_enough(shopping_cart):
-conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER\
-_JUG]
+    conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER_\
+JUG]
+
     reqList = [EGGS_REQUIRED, FLOUR_REQUIRED, BUTTER_REQUIRED, YEAST_REQUIRED, MILK_REQUIRED]
-    
-    flag = True 
-    
+
+    flag = True
+
     for i in range(0):
         if shopping_cart[0] * conList[0] >= reqList[0]:
             flag = True
         else:
             return False
-	    
-	 if shopping_cart[1] * conList[1] >= reqList[1]:
-            flag = True
-        else:
-            return False   
-	    
-	    if shopping_cart[2] * conList[2] >= reqList[2]:
-            flag = True
-        else:
-            return False  
-	    
-	    if shopping_cart[3] * conList[3] >= reqList[3]:
-            flag = True
-        else:
-            return False  
-	    
-	    
-	    if shopping_cart[4] * conList[4] >= reqList[4]:
-            flag = True
-        else:
-            return False  
-	    
 
-    return flag
+        if shopping_cart[1] * conList[1] >= reqList[1]:
+            flag = True
+        else:
+            return False
+
+        if shopping_cart[2] * conList[2] >= reqList[2]:
+            flag = True
+        else:
+            return False
+
+        if shopping_cart[3] * conList[3] >= reqList[3]:
+            flag = True
+        else:
+            return False
+
+        if shopping_cart[4] * conList[4] >= reqList[4]:
+            flag = True
+        else:
+            return False
+	    
 
 def bake():
     print("We have everything we need! Ready! Set! Bake!")
@@ -131,7 +125,7 @@ def bake():
         print(index + 1, "-", optionsList[index])
         index += 1
 
-    crossOff = int(input("What action would you like to cross off your list next? "))
+    crossOff = int(input("What action would you like to cross off your list next?"))
 
     if crossOff != optionsList[0]:
         print("We should really start the baguette dough first!")
