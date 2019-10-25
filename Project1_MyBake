@@ -88,9 +88,9 @@ conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_P
 _JUG]
     reqList = [EGGS_REQUIRED, FLOUR_REQUIRED, BUTTER_REQUIRED, YEAST_REQUIRED, MILK_REQUIRED]
     
-        
-
-    for i in range(1):
+    flag = True 
+    
+    for i in range(0):
         if shopping_cart[0] * conList[0] >= reqList[0]:
             flag = True
         else:
