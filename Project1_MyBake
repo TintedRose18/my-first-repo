@@ -18,8 +18,7 @@ CUPS_IN_GALLON = 16
 TSP_IN_CUP = 48
 
 NOTHING = 'NOTHING'
-optionsList = ["Begin the baguette dough", "Make the macrons", "Make the croissants", "Bake the baguett\
-es"]
+optionsList = ["Begin the baguette dough", "Make the macrons", "Make the croissants", "Bake the baguettes"]
 cookingList = ["eggs", "flour", "butter", "yeast", "milk"]
 
 def print_task_list(tasks_remaining):
