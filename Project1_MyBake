@@ -47,35 +47,43 @@ def go_shopping():
 
     money_tracker = STARTING_FUNDS
 
-    enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+     enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
     while enterItem != NOTHING and money_tracker > 0:
 
-        if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2] and en\
-terItem != cookingList[3] and enterItem != cookingList[4]:
+        if enterItem != cookingList[0] and enterItem != cookingList[1] and enterItem != cookingList[2\
+] and enterItem != cookingList[3] and enterItem != cookingList[4]:
             print("That is not a valid entry.")
 
         if enterItem == cookingList[0]:
             myEggs = float(input("How many crates of eggs would you like? "))
             egg_tracker += myEggs
-            money_tracker = money_tracker - (myEggs * EGGS_PER_CRATE)
+            money_tracker = money_tracker - (myEggs * EGGS_COST_PER_CRATE)
+            print(money_tracker)
 
         if enterItem == cookingList[1]:
             myFlour = float(input("How many bags of flour would you like? "))
             flour_tracker += myFlour
+            money_tracker = money_tracker - (myFlour * FLOUR_COST_PER_BAG)
+            print(money_tracker)
 
         if enterItem == cookingList[2]:
             myButter = float(input("How many packs of butter would you like? "))
             butter_tracker += myButter
+            money_tracker = money_tracker - (myButter * BUTTER_COST_PER_PACK)
+            print(money_tracker)
 
         if enterItem == cookingList[3]:
             myYeast = float(input("How many bags of yeast would you like? "))
             yeast_tracker += myYeast
+            money_tracker = money_tracker - (myYeast * YEAST_COST_PER_BAG)
+            print(money_tracker)
 
         if enterItem == cookingList[4]:
             myMilk = float(input("How many jugs of milk would you like? "))
             milk_tracker += myMilk
+            money_tracker = money_tracker - (myMilk * MILK_COST_PER_JUG)
+            print(money_tracker)
 
-        print(money_tracker)
         enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
     return itemsList
