@@ -49,27 +49,33 @@ def go_shopping():
     while enterItem != NOTHING and money_tracker > 0:
 
         if enterItem == cookingList[0]:
-            egg_tracker = float(input("How many crates of eggs would you like? "))
-            if eggs_tracker > EGGS_REQUIRED:
-                print("You have run out of money!")
+            myEggs = float(input("How many crates of eggs would you like? "))
+            egg_tracker += myEggs
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+
         if enterItem == cookingList[1]:
-            flour_tracker = float(input("How many bags of flour would you like? "))
-            if flour_tracker > FLOUR_REQUIRED:
-                print("You have run out of money!")
+            myFlour = float(input("How many bags of flour would you like? "))
+            flour_tracker += myFlour
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+
         if enterItem == cookingList[2]:
-            butter_tracker = float(input("How many packs of butter would you like? "))
-            if butter_tracker > BUTTER_REQUIRED:
-                print("You have run out of money!")
-        if enterItem == cookingList[3]:
-            yeast_tracker = float(input("How many bags of yeast would you like? "))
-            if yeast_tracker > YEAST_REQUIRED:
-                print("You have run out of money!")
+            myButter = float(input("How many packs of butter would you like? "))
+            butter_tracker += myButter
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+
+	if enterItem == cookingList[3]:
+            myYeast = float(input("How many bags of yeast would you like? "))
+            yeast_tracker += myYeast
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+
         if enterItem == cookingList[4]:
-            milk_tracker = float(input("How many jugs of milk would you like? "))
-            if milk_tracker > MILK_REQUIRED:
-                print("You have run out of money!")
-	else:
-            print("That is not a valid entry.")
+            myMilk = float(input("How many jugs of milk would you like? "))
+            milk_tracker += myMilk
+            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+	    
+	#else:                                                                         	                      
+         #   print("That is not a valid entry.")                                                             
+          #  enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ") 
 
 def check_items_enough(shopping_cart):
     myCart = []
