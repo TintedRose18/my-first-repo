@@ -83,7 +83,8 @@ def go_shopping():
             milk_tracker += myMilk
             money_tracker = money_tracker - (myMilk * MILK_COST_PER_JUG)
             print(money_tracker)
-
+	    
+        print(money_tracker)
         enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
     return itemsList
