@@ -42,28 +42,34 @@ def go_shopping():
     butter_tracker = 0
     yeast_tracker = 0
     milk_tracker = 0
+    
+    money_tracker = STARTING_FUNDS
 
     enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store)")
-    while enterItem != NOTHING:
+    while enterItem != NOTHING and money_tracker > 0:
 
         if enterItem == cookingList[0]:
             egg_tracker = float(input("How many crates of eggs would you like? "))
-
+            if eggs_tracker > EGGS_REQUIRED:
+                print("You have run out of money!")
         if enterItem == cookingList[1]:
             flour_tracker = float(input("How many bags of flour would you like? "))
-
+            if flour_tracker > FLOUR_REQUIRED:
+                print("You have run out of money!")
         if enterItem == cookingList[2]:
             butter_tracker = float(input("How many packs of butter would you like? "))
-
+            if butter_tracker > BUTTER_REQUIRED:
+                print("You have run out of money!")
         if enterItem == cookingList[3]:
             yeast_tracker = float(input("How many bags of yeast would you like? "))
-
+            if yeast_tracker > YEAST_REQUIRED:
+                print("You have run out of money!")
         if enterItem == cookingList[4]:
             milk_tracker = float(input("How many jugs of milk would you like? "))
-
+            if milk_tracker > MILK_REQUIRED:
+                print("You have run out of money!")
 	else:
             print("That is not a valid entry.")
-            enterItem = input("What would you like to purhcase (Enter 'NOTHING' to leave store)")
 
 def check_items_enough(shopping_cart):
     myCart = []
@@ -122,8 +128,6 @@ if __name__ == "__main__":
     print()
 
     print("Welcome to the supermarket!")
-
-    bakeOff = []
 
     letsGo = go_shopping()
 
