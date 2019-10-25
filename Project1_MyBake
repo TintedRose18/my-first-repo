@@ -82,14 +82,37 @@ def go_shopping():
 def check_items_enough(shopping_cart):
 conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER\
 _JUG]
-    reqList = num[EGGS_REQUIRED, FLOUR_REQUIRED, BUTTER_REQUIRED, YEAST_REQUIRED, MILK_REQUIRED]
+    reqList = [EGGS_REQUIRED, FLOUR_REQUIRED, BUTTER_REQUIRED, YEAST_REQUIRED, MILK_REQUIRED]
+    
+        
 
-    for i in range(conList):
-        if shopping_cart[i] * conList[i] >= reqList[i]:
+    for i in range(1):
+        if shopping_cart[0] * conList[0] >= reqList[0]:
             flag = True
-
         else:
             return False
+	    
+	 if shopping_cart[1] * conList[1] >= reqList[1]:
+            flag = True
+        else:
+            return False   
+	    
+	    if shopping_cart[2] * conList[2] >= reqList[2]:
+            flag = True
+        else:
+            return False  
+	    
+	    if shopping_cart[3] * conList[3] >= reqList[3]:
+            flag = True
+        else:
+            return False  
+	    
+	    
+	    if shopping_cart[4] * conList[4] >= reqList[4]:
+            flag = True
+        else:
+            return False  
+	    
 
     return flag
 
