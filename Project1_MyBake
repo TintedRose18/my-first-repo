@@ -58,7 +58,11 @@ terItem != cookingList[3] and enterItem != cookingList[4]:
         if enterItem == cookingList[0]:
             myEggs = float(input("How many crates of eggs would you like? "))
             egg_tracker += myEggs
+	    money_tracker = money_tracker - (myEggs * EGGS_PER_CRATE)
+	    
+	    
             enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+	    
 
         if enterItem == cookingList[1]:
             myFlour = float(input("How many bags of flour would you like? "))
