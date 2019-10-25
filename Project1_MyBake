@@ -77,32 +77,19 @@ def go_shopping():
 	    
 	#else:                                                                         	                      
          #   print("That is not a valid entry.")                                                             
-          #  enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ") 
+	 # reprompt user
 
 def check_items_enough(shopping_cart):
-	conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER\
+conList = [EGGS_PER_CRATE, CUPS_FLOUR_PER_BAG, TBSP_BUTTER_PER_PACK, CUP_YEAST_PER_BAG, GALLONS_MILK_PER\
 _JUG]
+    reqList = [EGGS_REQUIRED, FLOUR_REQUIRED, BUTTER_REQUIRED, YEAST_REQUIRED, MILK_REQUIRED]
 
     for i in range(conList):
-        if shopping_cart[i] * conList >= EGGS_REQUIRED:
+        if shopping_cart[i] * conList[i] >= reqList[i]:
             flag = True
-        else:
-            flag = False
-	    #add a statement?
+
+        return False
 	
-	
-	
-   # myCart = []
-    #while True:
-     #   enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-      #  myCart.append(enterItem)
-       # enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-#
- #       if enterItem in myCart:
-  #          print("This item is already in the cart. Pick something else.")
-   #         enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-#
- #       #return shopping_cart                                                                                             
 
 
 def bake():
