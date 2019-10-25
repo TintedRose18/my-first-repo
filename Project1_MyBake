@@ -138,8 +138,8 @@ if __name__ == "__main__":
     print("Welcome to the supermarket!")
 
     letsGo = go_shopping()
-
-
+    	
+    checkIt = check_items_enough(letsGo)
 
 
 
