@@ -55,34 +55,32 @@ terItem != cookingList[3] and enterItem != cookingList[4]:
             print("That is not a valid entry.")
             enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 
-        if enterItem == cookingList[0]:
+       	if enterItem == cookingList[0]:
             myEggs = float(input("How many crates of eggs would you like? "))
             egg_tracker += myEggs
 	    money_tracker = money_tracker - (myEggs * EGGS_PER_CRATE)
 	    
-	    
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
-	    
 
-        if enterItem == cookingList[1]:
-            myFlour = float(input("How many bags of flour would you like? "))
-            flour_tracker += myFlour
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+      	if enterItem == cookingList[1]:
+           myFlour = float(input("How many bags of flour would you like? "))
+           flour_tracker += myFlour
+   
 
         if enterItem == cookingList[2]:
             myButter = float(input("How many packs of butter would you like? "))
             butter_tracker += myButter
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+            
 
 	if enterItem == cookingList[3]:
             myYeast = float(input("How many bags of yeast would you like? "))
             yeast_tracker += myYeast
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+       
 
         if enterItem == cookingList[4]:
             myMilk = float(input("How many jugs of milk would you like? "))
             milk_tracker += myMilk
-            enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
+	
+        enterItem = input("What would you like to purchase (Enter 'NOTHING' to leave store) ")
 	    
   return itemsList
 	   
